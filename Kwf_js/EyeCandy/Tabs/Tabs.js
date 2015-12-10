@@ -89,12 +89,10 @@ Tabs.prototype = {
         if (this._activeTabIdx !== null) {
             $(this.switchEls[this._activeTabIdx]).removeClass('kwfUp-kwfTabsLinkActive');
             oldContentEl.css({
-                'z-index': 2,
-                'position': 'absolute'
+                'z-index': 2
             });
             newContentEl.css({
-                'z-index': 1,
-                'position': 'absolute'
+                'z-index': 1
             });
             onReady.callOnContentReady(this.contentEls[idx], {newRender: false});
             oldContentEl.hide();
